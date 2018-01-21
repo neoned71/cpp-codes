@@ -65,5 +65,44 @@ int main ()
 //deletion of a string*;
   cout << "size of the string pointer" << sizeof(test) << "\n";
   delete test;
+  
+  string x("hello");
+  
+  
   return 0;
+}
+
+void string_search(string x)
+{
+  string ret=x.index("lo");
+/*returns the zero-based index of the leftmost occurrence of substring "lo" (3, in this case). The argument may be a String, SubString, char, char*, or Regex.
+x.index("l", 2)
+returns the index of the first of the leftmost occurrence of "l" found starting the search at position x[2], or 2 in this case.
+x.index("l", -1)
+returns the index of the rightmost occurrence of "l", or 3 here.
+x.index("l", -3)
+returns the index of the rightmost occurrence of "l" found by starting the search at the 3rd to the last position of x, returning 2 in this case.
+*/
+pos = r.search("leo", 3, len, 0);
+//returns the index of r in the char* string of length 3, starting at position 0, also placing the length of the match in reference parameter len.
+if(x.contains("He")){
+  cout << "yes it contains";
+}
+/* returns nonzero if the String x contains the substring "He". The argument may be a String, SubString, char, char*, or Regex.
+x.contains("el", 1);
+returns nonzero if x contains the substring "el" at position 1. As in this example, the second argument to contains, if present, means to match the substring only at that position, and not to search elsewhere in the string.
+x.contains(RXwhite);
+returns nonzero if x contains any whitespace (space, tab, or newline). Recall that RXwhite is a global whitespace Regex.
+*/
+Regex  r = "e[a-z]*o";
+Regex  r2("/[a-z]*/");
+int status1=x.matches("lo", 3);
+cout << status1;
+returns nonzero if x starting at position 3 exactly matches "lo", with no trailing characters (as it does in this example).
+int status2=x.matches(r);
+cout << status2;
+//returns nonzero if String x as a whole matches Regex r.
+int f = x.freq("l");
+cout << f;
+//returns the number of distinct, nonoverlapping matches to the argument (2 in this case).
 }
